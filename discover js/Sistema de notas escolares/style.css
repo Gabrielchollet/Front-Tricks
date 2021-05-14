@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+caption {
+    font-size: 4rem;
+}
+
 table {
     width: 80%;
     margin: 10px auto;

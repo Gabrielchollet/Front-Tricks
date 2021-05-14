@@ -7,7 +7,7 @@ numérico para sistema de notas em caracteres tipo A B C
 * de 80 - 89      - B
 * de 70 - 79      - C
 * de 60 - 69      - D
-* de 50 - 59      - F
+* de 00 - 59      - F
 
 */
 
@@ -25,8 +25,11 @@ function conversor(value) {
     else if (value > 60) {
         value = 'D'
     }
-    else if (value > 50 && value < 60) {
+    else if (value >=0 && value < 60) {
         value = 'F'
+    }
+    else {
+        value = 'nota inválida'
     }
   return value
 }
