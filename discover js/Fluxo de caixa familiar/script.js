@@ -14,7 +14,7 @@ var transactions = {
 }
 
 function addTransactions() {
-    let value = Number(prompt("Indique o valor da transação realizada: "))
+    let value = Number(document.getElementById("valor").value)
 
     if (value > 0) {
         transactions.receitas.push(value)
@@ -24,23 +24,24 @@ function addTransactions() {
     }
 }
 
-function calcTotal() {
-    let receita, despesa;
-    transactions.receitas.forEach((number, index, array) => {
-        receita += Number(number)
-    })
-
-    transactions.despesas.forEach((number, index, array) => {
-        despesa += Number(number)
-    })
-
-    let saldo = receita - despesa
-
-    return saldo
+function expressResult() {
+    let saldo = calcTotal()
+    let balance = (saldo > 0) ? "Saldo positivo" : "Saldo negativo"
+    alert(balance + " igual a " + saldo)
 }
 
-function expressResult() {
-    let balance = (calcTotal() > 0) ? "Saldo positivo" : "Saldo negativo"
-    console.log(balance)
-    console.log(calcTotal())
+
+function calcTotal() {
+    let receita = 0, despesa = 0;
+    transactions.receitas.forEach((number) => {
+        receita += number
+    })
+
+    transactions.despesas.forEach((number) => {
+        despesa += number
+    })
+
+    
+
+    return receita + despesa
 }

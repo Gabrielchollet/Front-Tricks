@@ -1,4 +1,23 @@
+/* Global */
+* {
+    padding: 0;
+}
+
+
+/* Form */
+div.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 button {
     width: 180px;
-    height: 80px;
+    height: 4rem;
+}
+
+input {
+    border:2px solid;
+    height: 4rem;
+    width: 10rem;
 }
