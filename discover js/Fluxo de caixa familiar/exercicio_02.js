@@ -22,12 +22,14 @@ function addTransactions() {
     else {
         transactions.despesas.push(value)
     }
+
+    limpaInput()
 }
 
 function expressResult() {
-    let saldo = calcTotal()
-    let balance = (saldo > 0) ? "Saldo positivo" : "Saldo negativo"
-    alert(balance + " igual a " + saldo)
+    let balance = calcTotal().toFixed(2)
+    let balanceText = (balance > 0) ? "Saldo positivo" : "Saldo negativo"
+    console.log(`${balanceText} igual a R$${balance}`)
 }
 
 
@@ -41,7 +43,9 @@ function calcTotal() {
         despesa += number
     })
 
-    
-
     return receita + despesa
 }
+
+function limpaInput() {
+    document.getElementById('valor').value=''
+  }
