@@ -5,6 +5,7 @@
   
   body {
     text-align: center;
+    background-color: #4169E1;
   }
   
   h1 {
@@ -26,5 +27,11 @@
   input {
     width: 5rem;
     height: 1.5rem;
+  }
+
+  #inp {
+    margin: 0 50px;
+    padding: 20px;
+    background-color: rgba(137, 43, 226, 0.301);
   }
   

@@ -10,11 +10,32 @@
 </head>
 
 <body>
+    <h1>
+        Sistema de gastos familiar
+    </h1>
     <div class="form">
+        <input type="text" placeholder="Título da transação" id="nameTransaction">
         <input type="number" placeholder="Valor da transação" id="valor">
         <button onclick="addTransactions()">Adicionar transação</button>
         <button onclick="expressResult()">Expressar o resultado</button>
     </div>
+    <table id="tableTransactions">
+        <thead>
+            <tr>
+                <th>Título da transação</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+
+        <tbody id='rowTransactions'>
+        </tbody>
+        <!-- <tfoot id='rowTotal'>
+            <tr>
+                <td>Total:</td>
+                <td>RS 445.00</td>
+            </tr>
+        </tfoot> -->
+    </table>
 
     <script src="./exercicio_02.js"></script>
 </body>

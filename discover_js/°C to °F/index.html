@@ -11,8 +11,9 @@
 
 <body>
   <h1>Conversor de temperatura</h1>
-  
-    <p>Digite um valor em qualquer um dos campos para converter entre as temperatura:</p>
+
+  <p>Digite um valor em qualquer um dos campos para converter entre as temperatura:</p>
+  <section id="inp">
     <div class="temp">
       <label>°F</label>
       <input id="inputFahrenheit" type="number" oninput="conversor(this.id,this.value)"
@@ -23,8 +24,8 @@
       <input id="inputCelsius" type="number" oninput="conversor(this.id,this.value)"
         onchange="conversor(this.id,this.value)">
     </div>
-
-    <script src="./exercicio_03.js"></script>
+  </section>
+  <script src="./exercicio_03.js"></script>
 </body>
 
 </html>

@@ -1,8 +1,14 @@
 /* Global */
 * {
+    margin: 0;
     padding: 0;
 }
 
+/* Titles */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
 
 /* Form */
 div.form {
@@ -13,11 +19,20 @@ div.form {
 
 button {
     width: 180px;
-    height: 4rem;
+    height: 3rem;
 }
 
 input {
+    border-radius: 5px;
     border:2px solid;
-    height: 4rem;
+    height: 3rem;
     width: 10rem;
+}
+
+.type {
+    text-align: center;
+}
+
+table {
+    margin: auto;
 }
