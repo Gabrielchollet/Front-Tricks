@@ -33,23 +33,78 @@ h1 {
     text-align: center;
 }
 
-/* Form */
-div.form {
+/*Status*/
+#status {
     margin-top: -8rem;
+}
+
+#status h2 {
+    color:rgb(255, 255, 255);
+    margin-top: 0;
+}
+
+/*Cards*/
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    color: #363f5f;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.card.total {
+    background-color: #49AA26;
+    color: white;
+}
+
+/* Form */
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 input {
-    border-radius: 5px;
-    border:2px solid;
-    height: 3rem;
-    width: 10rem;
+    height: 3.25rem;
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+}
+
+input:first-child {
+    border-radius: 0.2rem 0 0 0.2rem;
+}
+
+input:nth-child(2) {
+    border-radius: 0 0.2rem 0.2rem 0;
 }
 
 .type {
     text-align: center;
+}
+
+/*Buttons*/
+button {
+    width: 100%;
+    height: 3.25rem;
+}
+
+button:hover {
+    background-color: var(--greenHover);
 }
 
 /*Table*/
@@ -97,20 +152,6 @@ table tbody td {
     background-color: white;
     padding: 1rem 2rem;
 }
-/* td, th {
-    border: 1px solid #cccccc;
-    padding: 10px;
-} */
-
-/*Buttons*/
-button {
-    width: 180px;
-    height: 3rem;
-}
-
-button:hover {
-    background-color: var(--greenHover);
-}
 
 /*Footer*/
 #icon {
@@ -139,7 +180,7 @@ footer {
         font-size: 87.5%; /* 14px */
     }
 
-    #balance {
+    #status {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;

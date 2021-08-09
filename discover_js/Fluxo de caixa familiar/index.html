@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+        rel="stylesheet">
     <title>Sistema de gastos familiar</title>
 </head>
 
@@ -17,12 +22,45 @@
     </header>
 
     <main class="conteiner">
-        <div class="form">
-            <input type="text" placeholder="Título da transação" id="nameTransaction">
+        <section id="status">
+            <div class="card">
+                <h3>
+                    <span>
+                        Entradas
+                    </span>
+                    <img src="./images/income.svg" alt="Image de entradas">
+                </h3>
+                <p id="incomeDisplay">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span>
+                        Saídas
+                    </span>
+                    <img src="./images/expense.svg" alt="Image de saídas">
+                </h3>
+                <p id="expenseDisplay">R$ 0,00</p>
+            </div>
+
+            <div class="card total">
+                <h3>
+                    <span>
+                        Total
+                    </span>
+                    <img src="./images/total.svg" alt="Image total">
+                </h3>
+                <p id="totalDisplay">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section class="form">
+            <input type="text" placeholder="Descrição da transação" id="nameTransaction">
             <input type="number" placeholder="Valor da transação" id="valor">
             <button onclick="addTransactions()">Adicionar transação</button>
             <button onclick="expressResult()">Expressar o resultado</button>
-        </div>
+        </section>
+
         <section id="transaction">
             <table id="tableTransactions">
                 <thead>
