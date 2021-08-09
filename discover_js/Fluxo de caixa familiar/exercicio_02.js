@@ -58,10 +58,28 @@ function limpaInput() {
 }
 
 function addRow(name, value) {
-    tbody = document.getElementById('rowTransactions');
-    row = `<tr>
+    const tbody = document.getElementById('rowTransactions');
+    const amount = formatCurrency(value);
+    const row = `<tr>
                 <td>${name}</td>
-                <td>R$ ${value}</td>
+                <td>${amount}</td>
             </tr>`;
     tbody.innerHTML += row;
+}
+
+function formatCurrency(value) {
+    value = Number(value) * 100
+    // Aqui pegamos o valor e trabalhamos o sinal 
+    const signal = Number(value) < 0 ? "-" : ""
+    // Regex ou expressão regular para remoção de qualquer caractere especial
+    value = String(value).replace(/\D/g, "")
+    // Como ele é guardado multiplicado por 100, aqui o valor volta ao "estado original"
+    value = Number(value) / 100
+    // Formata como dinheiro
+    value = value.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })
+    // Devolve o valor formatado com o respectivo sinal 
+    return signal + value
 }

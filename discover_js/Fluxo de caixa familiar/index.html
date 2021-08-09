@@ -10,32 +10,44 @@
 </head>
 
 <body>
-    <h1>
-        Sistema de gastos familiar
-    </h1>
-    <div class="form">
-        <input type="text" placeholder="Título da transação" id="nameTransaction">
-        <input type="number" placeholder="Valor da transação" id="valor">
-        <button onclick="addTransactions()">Adicionar transação</button>
-        <button onclick="expressResult()">Expressar o resultado</button>
-    </div>
-    <table id="tableTransactions">
-        <thead>
-            <tr>
-                <th>Título da transação</th>
-                <th>Valor</th>
-            </tr>
-        </thead>
+    <header>
+        <h1>
+            Fluxo de caixa familiar
+        </h1>
+    </header>
 
-        <tbody id='rowTransactions'>
-        </tbody>
-        <!-- <tfoot id='rowTotal'>
-            <tr>
-                <td>Total:</td>
-                <td>RS 445.00</td>
-            </tr>
-        </tfoot> -->
-    </table>
+    <main class="conteiner">
+        <div class="form">
+            <input type="text" placeholder="Título da transação" id="nameTransaction">
+            <input type="number" placeholder="Valor da transação" id="valor">
+            <button onclick="addTransactions()">Adicionar transação</button>
+            <button onclick="expressResult()">Expressar o resultado</button>
+        </div>
+        <section id="transaction">
+            <table id="tableTransactions">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+
+                <tbody id='rowTransactions'>
+                </tbody>
+                <!-- <tfoot id='rowTotal'>
+                    <tr>
+                        <td>Total:</td>
+                        <td>RS 445.00</td>
+                    </tr>
+                </tfoot> -->
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://github.com/Gabrielchollet/" target="_blank">GitHub<img id="icon"
+                src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="GitHub">
+    </footer>
 
     <script src="./exercicio_02.js"></script>
 </body>
